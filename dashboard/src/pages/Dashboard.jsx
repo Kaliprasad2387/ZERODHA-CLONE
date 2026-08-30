@@ -4,7 +4,7 @@ import "./Dashboard.css";
 
 import Summary from "../component/summary/Summary";
 import PortfolioChart from "../component/PortfolioChart/PortfolioChart";
-import WatchList from "../component/watchList/WatchList";
+import WatchList from "../component/watchlist/WatchList";
 import PortfolioGrowth from "../component/PortfolioGrowth/PortfolioGrowth";
 
 function Dashboard() {
