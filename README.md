@@ -182,3 +182,24 @@ This project is created for educational and portfolio purposes only.
 
 It is not connected to or affiliated with the official Zerodha trading platform.
 
+## 📸 Screenshots
+
+### Login
+
+![Login](./screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+### Holdings
+
+![Holdings](./screenshots/holdings.png)
+
+### Orders
+
+![Orders](./screenshots/orders.png)
+
+### Funds
+
+![Funds](./screenshots/funds.png)
