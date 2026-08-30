@@ -1,0 +1,61 @@
+.positions-page {
+  width: 100%;
+}
+
+/* Summary cards */
+
+.positions-summary-card {
+  width: 100%;
+  min-height: 125px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.positions-summary-card h6 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.positions-summary-card h4 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Table */
+
+.positions-table-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.positions-table-card .table {
+  width: 100%;
+  margin: 0;
+}
+
+.positions-table-card th {
+  white-space: nowrap;
+}
+
+.positions-table-card td {
+  white-space: nowrap;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .positions-table-card {
+    padding: 10px;
+  }
+
+  .positions-summary-card {
+    min-height: auto;
+  }
+}

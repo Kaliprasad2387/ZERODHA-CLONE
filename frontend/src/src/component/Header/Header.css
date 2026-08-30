@@ -1,0 +1,81 @@
+.dashboard-header {
+  height: 72px;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.welcome-user {
+  font-size: 16px;
+  color: #374151;
+}
+
+.profile-button {
+  text-decoration: none;
+  border: 1px solid #387ed1;
+  color: #387ed1;
+
+  padding: 8px 14px;
+  border-radius: 6px;
+
+  font-size: 15px;
+}
+
+.profile-button:hover {
+  background: #387ed1;
+  color: white;
+}
+
+.logout-button {
+  border: 1px solid #dc2626;
+  background: white;
+  color: #dc2626;
+
+  padding: 8px 14px;
+  border-radius: 6px;
+
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 0 12px;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .welcome-user {
+    display: none;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+}

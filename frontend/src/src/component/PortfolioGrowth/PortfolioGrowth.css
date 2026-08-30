@@ -1,0 +1,186 @@
+.portfolio-growth-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 3px 12px
+    rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+
+.portfolio-growth-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.portfolio-growth-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 21px;
+}
+
+.portfolio-growth-header p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* Summary */
+
+.portfolio-growth-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.portfolio-growth-summary > div {
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+}
+
+.portfolio-growth-summary span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+.portfolio-growth-summary strong {
+  display: block;
+
+  font-size: 20px;
+
+  color: #111827;
+}
+
+.portfolio-growth-summary small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 13px;
+}
+
+/* Chart */
+
+.portfolio-chart-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 350px;
+}
+
+/* Empty */
+
+.portfolio-empty {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.portfolio-empty-icon {
+  font-size: 45px;
+
+  margin-bottom: 10px;
+}
+
+.portfolio-empty h5 {
+  margin: 0 0 5px;
+
+  color: #374151;
+}
+
+.portfolio-empty p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+/* Button */
+
+.portfolio-growth-header button {
+  border-radius: 7px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+  .portfolio-growth-card {
+    padding: 18px;
+  }
+
+  .portfolio-growth-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-chart-wrapper {
+    height: 300px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  .portfolio-growth-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .portfolio-growth-header h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-growth-header button {
+    font-size: 12px;
+  }
+
+  .portfolio-chart-wrapper {
+    height: 260px;
+  }
+
+}

@@ -1,0 +1,79 @@
+.topbar {
+  width: 100%;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-sizing: border-box;
+}
+
+.topbar-title h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.topbar-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 15px;
+}
+
+.user-greeting {
+  font-size: 18px;
+}
+
+.user-name {
+  color: #374151;
+
+  font-weight: 500;
+}
+
+/* Buttons */
+
+.profile .btn {
+  border-radius: 6px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 12px;
+  }
+
+  .topbar-title h3 {
+    font-size: 18px;
+  }
+
+  .profile {
+    gap: 7px;
+  }
+
+  .user-name {
+    display: none;
+  }
+}

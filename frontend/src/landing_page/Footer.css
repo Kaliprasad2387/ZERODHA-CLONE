@@ -1,0 +1,43 @@
+.footer {
+  background: #fbfbfb;
+  border-top: 1px solid #eee;
+  padding: 60px 0;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  display: block;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #387ed1;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons i {
+  font-size: 22px;
+  margin-right: 18px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #387ed1;
+}

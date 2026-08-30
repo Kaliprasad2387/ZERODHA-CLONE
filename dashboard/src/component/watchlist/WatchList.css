@@ -1,0 +1,237 @@
+.watchlist {
+  width: 100%;
+  margin-top: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* HEADER */
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.watchlist-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.watchlist-subtitle {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.watchlist-refresh {
+  border: 1px solid #387ed1;
+  background: #ffffff;
+  color: #387ed1;
+  border-radius: 7px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+.watchlist-refresh:hover {
+  background: #387ed1;
+  color: #ffffff;
+}
+
+/* SEARCH */
+
+.watchlist-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 18px;
+  background: #fafafa;
+}
+
+.watchlist-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* LIST */
+
+.watchlist-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* STOCK */
+
+.watchlist-stock {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.watchlist-stock:last-child {
+  border-bottom: none;
+}
+
+/* INFO */
+
+.stock-info h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stock-info span {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* PRICE */
+
+.stock-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stock-price strong {
+  color: #111827;
+  font-size: 16px;
+}
+
+.profit {
+  color: #16a34a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.loss {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.neutral {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* BUTTONS */
+
+.stock-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.buy-btn,
+.sell-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.buy-btn:hover {
+  background: #15803d;
+}
+
+.sell-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.sell-btn:hover {
+  background: #b91c1c;
+}
+
+/* EMPTY */
+
+.watchlist-empty {
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.watchlist-empty h4 {
+  margin: 0 0 8px;
+  color: #4b5563;
+}
+
+.watchlist-empty p {
+  margin: 0;
+  color: #9ca3af;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .watchlist {
+    padding: 16px;
+  }
+
+  .watchlist-stock {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stock-price {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stock-actions {
+    width: 100%;
+  }
+
+  .buy-btn,
+  .sell-btn {
+    flex: 1;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .watchlist-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .watchlist-title {
+    font-size: 19px;
+  }
+
+  .watchlist-refresh {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+}

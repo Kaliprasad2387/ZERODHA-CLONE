@@ -1,0 +1,42 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sell-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

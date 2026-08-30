@@ -1,0 +1,77 @@
+.dashboard-page {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Summary */
+
+.dashboard-summary {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Main Dashboard */
+
+.dashboard-main-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(360px, 420px);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+/* Portfolio Chart */
+
+.dashboard-chart {
+  min-width: 0;
+}
+
+/* Watchlist */
+
+.dashboard-watchlist {
+  min-width: 0;
+}
+
+/* Growth */
+
+.dashboard-growth {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Remove unnecessary margins */
+
+.dashboard-chart .card {
+  margin-top: 0 !important;
+}
+
+.dashboard-watchlist .watchlist {
+  margin-top: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 12px;
+  }
+
+  .dashboard-main-grid {
+    gap: 15px;
+  }
+}

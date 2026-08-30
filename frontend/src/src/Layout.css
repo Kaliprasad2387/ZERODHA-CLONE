@@ -1,0 +1,41 @@
+.app-layout {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f8f9fa;
+}
+
+.app-main {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  width: 100%;
+
+  flex: 1;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .app-layout {
+    display: block;
+  }
+
+  .app-main {
+    width: 100%;
+  }
+}
