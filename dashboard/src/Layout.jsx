@@ -3,7 +3,7 @@ import "./Layout.css";
 import { Outlet } from "react-router-dom";
 
 import Menu from "./component/Menu/Menu";
-import TopBar from "./component/TopBar/TopBar";
+import TopBar from "./component/Topbar/TopBar";
 
 function Layout() {
   return (

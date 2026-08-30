@@ -1,4 +1,4 @@
-import "./Orders.css";
+import "./orders.css";
 
 import {
   useEffect,

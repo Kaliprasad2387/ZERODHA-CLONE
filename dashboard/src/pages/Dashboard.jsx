@@ -2,9 +2,9 @@ import { useCallback, useState } from "react";
 
 import "./Dashboard.css";
 
-import Summary from "../component/Summary/Summary";
+import Summary from "../component/summary/Summary";
 import PortfolioChart from "../component/PortfolioChart/PortfolioChart";
-import WatchList from "../component/WatchList/WatchList";
+import WatchList from "../component/watchList/WatchList";
 import PortfolioGrowth from "../component/PortfolioGrowth/PortfolioGrowth";
 
 function Dashboard() {
