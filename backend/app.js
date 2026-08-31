@@ -26,11 +26,15 @@ connectDB();
 // ================= MIDDLEWARE =================
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://zerodha-clone-frontend-ct52.onrender.com",
+      "https://zerodha-clone-dashboard-giln.onrender.com",
+    ],
     credentials: true,
   })
 );
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
