@@ -78,7 +78,7 @@ function Login() {
         );
 
         window.location.href =
-          `http://localhost:5174/?token=${token}&user=${user}`;
+          `https://zerodha-clone-dashboard-giln.onrender.com/?token=${token}&user=${user}`;
       }, 700);
 
     } catch (err) {
