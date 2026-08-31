@@ -89,9 +89,8 @@ function TopBar() {
 
       // Redirect to frontend login
       window.location.replace(
-        "http://localhost:5173/login"
-      );
-
+  "https://zerodha-clone-frontend-ct52.onrender.com/login"
+);
     } catch (error) {
       console.error(
         "LOGOUT ERROR:",
