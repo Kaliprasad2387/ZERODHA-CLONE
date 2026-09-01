@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 import API from "../api/api";
+import "./Holdings.css";
 
 import {
   getPnL,
@@ -148,50 +149,44 @@ function Holdings() {
           HEADER
       ========================= */}
 
-      <div className="d-flex justify-content-between align-items-center mb-4">
+<div className="holdings-header">
 
-        <div>
-          <h2 className="mb-1">
-            My Holdings
-          </h2>
+  <div className="holdings-title">
+    <h2 className="mb-1">
+      My Holdings
+    </h2>
 
-          <small className="text-muted">
-            Your current stock holdings
-          </small>
-        </div>
+    <small className="text-muted">
+      Your current stock holdings
+    </small>
+  </div>
 
-        <div className="d-flex gap-2">
+  <div className="holdings-actions">
 
-          <input
-            type="text"
-            className="form-control"
-            placeholder="🔍 Search Holdings..."
-            style={{
-              width: "250px",
-            }}
-            value={search}
-            onChange={(e) =>
-              setSearch(
-                e.target.value
-              )
-            }
-          />
+    <input
+      type="text"
+      className="form-control holdings-search"
+      placeholder="🔍 Search Holdings..."
+      value={search}
+      onChange={(e) =>
+        setSearch(e.target.value)
+      }
+    />
 
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={fetchHoldings}
-            disabled={loading}
-          >
-            {loading
-              ? "Loading..."
-              : "↻ Refresh"}
-          </button>
+    <button
+      type="button"
+      className="btn btn-success holdings-refresh"
+      onClick={fetchHoldings}
+      disabled={loading}
+    >
+      {loading
+        ? "Loading..."
+        : "↻ Refresh"}
+    </button>
 
-        </div>
+  </div>
 
-      </div>
-
+</div>
       {/* =========================
           SUMMARY
       ========================= */}
@@ -299,9 +294,9 @@ function Holdings() {
           HOLDINGS TABLE
       ========================= */}
 
-      <div className="table-responsive">
+     <div className="table-responsive holdings-table-wrapper">
 
-        <table className="table table-hover table-bordered align-middle">
+  <table className="table table-hover table-bordered align-middle holdings-table">
 
           <thead className="table-dark">
 

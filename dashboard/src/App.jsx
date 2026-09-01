@@ -23,8 +23,7 @@ import Profile from "./pages/Profile";
 
 function ProtectedRoute({ children }) {
   const [checking, setChecking] = useState(true);
-  const [authenticated, setAuthenticated] =
-    useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
     try {
@@ -44,10 +43,7 @@ function ProtectedRoute({ children }) {
       // ======================================
 
       if (token) {
-        localStorage.setItem(
-          "token",
-          token
-        );
+        localStorage.setItem("token", token);
       }
 
       // ======================================
@@ -56,23 +52,22 @@ function ProtectedRoute({ children }) {
 
       if (user) {
         try {
-          const decodedUser =
-            decodeURIComponent(user);
+          const parsedUser = JSON.parse(user);
 
           localStorage.setItem(
             "user",
-            decodedUser
+            JSON.stringify(parsedUser)
           );
         } catch (error) {
           console.error(
-            "USER DECODE ERROR:",
+            "USER PARSE ERROR:",
             error
           );
         }
       }
 
       // ======================================
-      // CHECK SAVED TOKEN
+      // CHECK TOKEN
       // ======================================
 
       const savedToken =
@@ -92,7 +87,7 @@ function ProtectedRoute({ children }) {
         window.history.replaceState(
           {},
           document.title,
-          "/"
+          window.location.pathname
         );
       }
 
@@ -103,72 +98,44 @@ function ProtectedRoute({ children }) {
       );
 
       setAuthenticated(false);
-
     } finally {
       setChecking(false);
     }
   }, []);
 
-  // ======================================
+  // ==========================================
   // CHECKING
-  // ======================================
+  // ==========================================
 
   if (checking) {
     return (
       <div
         style={{
-          textAlign: "center",
-          marginTop: "100px",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           fontSize: "20px",
         }}
       >
-        Loading Dashboard...
+        Loading...
       </div>
     );
   }
 
-  // ======================================
+  // ==========================================
   // NOT AUTHENTICATED
-  // ======================================
+  // ==========================================
 
   if (!authenticated) {
-    return (
-      <Navigate
-        to="/login-required"
-        replace
-      />
-    );
+    return <Navigate to="/login" replace />;
   }
 
-  // ======================================
+  // ==========================================
   // AUTHENTICATED
-  // ======================================
+  // ==========================================
 
   return children;
-}
-
-// ==========================================
-// LOGIN REQUIRED
-// ==========================================
-
-function LoginRequired() {
-  useEffect(() => {
-    window.location.replace(
-      "http://localhost:5173/login"
-    );
-  }, []);
-
-  return (
-    <div
-      style={{
-        textAlign: "center",
-        marginTop: "100px",
-        fontSize: "20px",
-      }}
-    >
-      Redirecting to login...
-    </div>
-  );
 }
 
 // ==========================================
@@ -178,21 +145,29 @@ function LoginRequired() {
 function App() {
   return (
     <BrowserRouter>
-
       <Routes>
 
-        {/* =================================
-            LOGIN REQUIRED
-        ================================= */}
+        {/* ==================================
+            LOGIN
+        ================================== */}
 
         <Route
-          path="/login-required"
-          element={<LoginRequired />}
+          path="/login"
+          element={
+            <div
+              style={{
+                padding: "40px",
+                textAlign: "center",
+              }}
+            >
+              Please login from the main frontend.
+            </div>
+          }
         />
 
-        {/* =================================
+        {/* ==================================
             PROTECTED DASHBOARD
-        ================================= */}
+        ================================== */}
 
         <Route
           path="/"
@@ -203,49 +178,35 @@ function App() {
           }
         >
 
-          {/* DASHBOARD */}
-
           <Route
             index
             element={<Dashboard />}
           />
-
-          {/* ORDERS */}
 
           <Route
             path="orders"
             element={<Orders />}
           />
 
-          {/* HOLDINGS */}
-
           <Route
             path="holdings"
             element={<Holdings />}
           />
-
-          {/* POSITIONS */}
 
           <Route
             path="positions"
             element={<Positions />}
           />
 
-          {/* FUNDS */}
-
           <Route
             path="funds"
             element={<Funds />}
           />
 
-          {/* TRANSACTIONS */}
-
           <Route
             path="transactions"
             element={<Transactions />}
           />
-
-          {/* PROFILE */}
 
           <Route
             path="profile"
@@ -254,22 +215,18 @@ function App() {
 
         </Route>
 
-        {/* =================================
-            UNKNOWN URL
-        ================================= */}
+        {/* ==================================
+            UNKNOWN ROUTE
+        ================================== */}
 
         <Route
           path="*"
           element={
-            <Navigate
-              to="/"
-              replace
-            />
+            <Navigate to="/" replace />
           }
         />
 
       </Routes>
-
     </BrowserRouter>
   );
 }

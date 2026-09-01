@@ -1,0 +1,108 @@
+/* =========================
+   HOLDINGS HEADER
+========================= */
+
+.holdings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.holdings-title {
+  flex-shrink: 0;
+}
+
+.holdings-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.holdings-search {
+  width: 250px;
+}
+
+.holdings-refresh {
+  white-space: nowrap;
+}
+
+/* =========================
+   HOLDINGS TABLE
+========================= */
+
+.holdings-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.holdings-table {
+  min-width: 850px;
+  margin-bottom: 0;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .holdings-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .holdings-actions {
+    width: 100%;
+  }
+
+  .holdings-search {
+    width: 100%;
+    flex: 1;
+  }
+
+  .holdings-refresh {
+    flex-shrink: 0;
+  }
+
+  .holdings-table {
+    min-width: 850px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .holdings-header {
+    margin-bottom: 18px;
+  }
+
+  .holdings-title h2 {
+    font-size: 26px;
+  }
+
+  .holdings-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .holdings-search {
+    width: 100%;
+  }
+
+  .holdings-refresh {
+    width: 100%;
+  }
+
+  .holdings-table {
+    min-width: 850px;
+  }
+}
