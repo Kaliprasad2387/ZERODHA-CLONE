@@ -189,49 +189,48 @@ function Orders() {
           HEADER
       ========================= */}
 
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      {/* =========================
+    HEADER
+========================= */}
 
-        <div>
-          <h2 className="mb-1">
-            Orders
-          </h2>
+<div className="orders-header mb-4">
 
-          <small className="text-muted">
-            Your BUY and SELL orders
-          </small>
-        </div>
+  <div className="orders-title">
+    <h2 className="mb-1">
+      Orders
+    </h2>
 
-        <div className="d-flex gap-2">
+    <small className="text-muted">
+      Your BUY and SELL orders
+    </small>
+  </div>
 
-          <input
-            type="text"
-            className="form-control"
-            placeholder="🔍 Search Stock..."
-            style={{
-              width: "250px",
-            }}
-            value={search}
-            onChange={(e) =>
-              setSearch(
-                e.target.value
-              )
-            }
-          />
+  <div className="orders-actions">
 
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={fetchOrders}
-            disabled={loading}
-          >
-            {loading
-              ? "Loading..."
-              : "↻ Refresh"}
-          </button>
+    <input
+      type="text"
+      className="form-control orders-search"
+      placeholder="🔍 Search Stock..."
+      value={search}
+      onChange={(e) =>
+        setSearch(e.target.value)
+      }
+    />
 
-        </div>
+    <button
+      type="button"
+      className="btn btn-success orders-refresh"
+      onClick={fetchOrders}
+      disabled={loading}
+    >
+      {loading
+        ? "Loading..."
+        : "↻ Refresh"}
+    </button>
 
-      </div>
+  </div>
+
+</div>
 
       {/* =========================
           SUMMARY
